@@ -189,10 +189,11 @@
                                                 <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
                                             </a>
 					</button> -->
-
-					<a href="{{ file.url }}" target="_blank">
-						<i class="fa fa-eye fa-lg" aria-hidden="true"></i>
-					</a>
+                    <button type="button" class="action-button">
+                        <a href="{{ file.url }}" target="_blank" class="action-button">
+                            <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </button>
 
                                     {% elif ".jpg" in file.url %}
 
@@ -210,8 +211,8 @@
                                             <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
                                         </a> -->
 
-                                        <button type="button" class="action-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                            <a href="{{ file.url }}" target="iframe_b"  class="action-button">
+                                        <button type="button" class="action-button" data-bs-toggle="modal" data-bs-target="#staticBackdropa">
+                                            <a href="{{ file.url }}" target="iframe_a"  class="action-button">
                                                 <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
                                             </a>
                                         </button>
@@ -354,4 +355,29 @@
             <p align="center">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close Live Previewing</button>
             </p>
+        </div>
+
+        <div class="modal fade" id="staticBackdropa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" data-bs-dismiss="modal">
+            <div class="modal-content">
+    
+
+
+                    <iframe width="900px" name="iframe_a" height="600px" style="margin-top: -20px; align-items: center; text-align: center; margin-left: -35%;">
+                    </iframe>
+
+
+                
+            </div>t
+            </div>
+
+            <p align="center">
+                <button type="button" onclick="reload()" class="btn btn-primary" data-bs-dismiss="modal">Close Live Previewing</button>
+            </p>
+
+            <script>
+                function reload() {
+                    location.reload();
+                }
+            </script>
         </div>
